@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AISB CCA Department</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="index">
+
+  <!-- ======================================================
+       NAVIGATION
+       ====================================================== -->
+  <header class="site-nav" id="site-nav">
+    <div class="container nav__inner">
+
+      <!-- Brand -->
+      <a href="index.html" class="nav__brand" aria-label="AISB CCA — Home">
+        <svg class="nav__brand-icon" viewBox="0 0 100 56" width="34" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50,28 C47,22 38,17 24,20 C14,22 2,20 4,14 C7,9 16,11 22,17 C20,10 25,5 31,9 C34,3 40,0 50,4 C60,0 66,3 69,9 C75,5 80,10 78,17 C84,11 93,9 96,14 C98,20 86,22 76,20 C62,17 53,22 50,28 Z M50,28 C48,33 47,38 49,41 C50,43 51,43 52,41 C53,38 52,33 50,28 Z"/>
+        </svg>
+        <span class="nav__brand-text">AISB CCA</span>
+      </a>
+
+      <!-- Desktop links -->
+      <nav id="nav-links" class="nav__links" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html"        class="nav__link" data-page="index">Home</a></li>
+          <li><a href="welcome.html"      class="nav__link" data-page="welcome">Welcome</a></li>
+          <li><a href="philosophy.html"   class="nav__link" data-page="philosophy">Our Philosophy</a></li>
+          <li><a href="joining-elc.html"  class="nav__link" data-page="joining-elc">Joining the ELC</a></li>
+          <li>
+            <a href="https://docs.google.com/document/d/1C8rKPDsnyIg01VgttbhQd866ZwGXewxtXoNhxPmOfxU/edit"
+               class="nav__link"
+               target="_blank"
+               rel="noopener noreferrer">
+              ELC Handbook
+              <svg class="nav__ext-icon" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5v5"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://docs.google.com/document/d/1jAWtmQBweBVDEVaAY76nu84KtQJgYyB6U0lxwEaAoNE/edit"
+               class="nav__link"
+               target="_blank"
+               rel="noopener noreferrer">
+              ES Handbook
+              <svg class="nav__ext-icon" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5v5"/></svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ======================================================
+       1. HERO
+       ====================================================== -->
+  <section class="hero" id="hero" aria-label="Hero">
+
+    <!-- Background gradient (JS injects floating bats here) -->
+    <div class="hero__bg"></div>
+
+    <div class="hero__photo-placeholder" aria-hidden="true">
+      <span>HERO PHOTO: Wide campus or action shot, landscape orientation</span>
+    </div>
+
+    <div class="hero__content">
+      <!-- JS splits headline into .hero__word spans for spring animation -->
+      <h1 class="hero__headline hero-anim" style="--delay: 0.3s">
+        Vampires Take Flight
+      </h1>
+      <p class="hero__sub hero-anim" style="--delay: 0.5s">
+        Co-Curricular Activities at AISB
+      </p>
+      <div class="hero-anim" style="--delay: 0.7s">
+        <a href="#intro" class="btn btn--yellow">Explore Our Programs</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ======================================================
+       2. INTRO
+       ====================================================== -->
+  <section class="intro" id="intro" aria-labelledby="intro-label">
+    <div class="container">
+      <div class="intro__inner reveal">
+        <span class="section-label" id="intro-label">Introduction</span>
+        <p class="intro__body">At AISB, we consider co-curricular activities (CCAs) to be a vital part of a comprehensive whole-child education. The AISB CCA department offers students opportunities to express creativity, demonstrate courage, and show compassion through activities such as playing on athletic teams, performing on stage, and taking on leadership roles. These experiences are seen as instrumental in fostering the development of new skills, contributing to personal growth, and fostering a sense of belonging within the school and the broader community. Our primary focus is on creating positive experiences, building meaningful memories, and cultivating lasting relationships.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       3. THREE PILLARS
+       ====================================================== -->
+  <section class="pillars" id="pillars" aria-labelledby="pillars-heading">
+    <div class="container">
+
+      <div class="pillars__header reveal">
+        <h2 id="pillars-heading">What We Stand For</h2>
+      </div>
+
+      <div class="pillars__grid reveal-stagger">
+
+        <!-- Creativity -->
+        <div class="pillar-card stagger-item">
+          <div class="pillar-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21h6"/>
+              <path d="M12 3a6 6 0 0 1 4.24 10.24C15.4 14.13 15 15 15 16v1H9v-1c0-1-.4-1.87-1.24-2.76A6 6 0 0 1 12 3z"/>
+            </svg>
+          </div>
+          <h3 class="pillar-card__title">Creativity</h3>
+          <p class="pillar-card__desc">Students express themselves through the arts, athletics, and innovation — discovering new ways to think, make, and contribute.</p>
+        </div>
+
+        <!-- Courage -->
+        <div class="pillar-card stagger-item">
+          <div class="pillar-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L4 6v6c0 5.25 3.5 10.15 8 11 4.5-.85 8-5.75 8-11V6l-8-4z"/>
+            </svg>
+          </div>
+          <h3 class="pillar-card__title">Courage</h3>
+          <p class="pillar-card__desc">Students step beyond their comfort zones, embrace challenge, and grow through meaningful risk, perseverance, and resilience.</p>
+        </div>
+
+        <!-- Compassion -->
+        <div class="pillar-card stagger-item">
+          <div class="pillar-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <h3 class="pillar-card__title">Compassion</h3>
+          <p class="pillar-card__desc">Students build empathy, support one another, and learn to contribute meaningfully to the community and the world around them.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       4. PROGRAM OVERVIEW
+       ====================================================== -->
+  <section class="programs" id="programs" aria-labelledby="programs-heading">
+    <div class="container">
+
+      <div class="programs__header reveal">
+        <h2 id="programs-heading">CCA Department Program Overview</h2>
+      </div>
+
+      <div class="programs__grid reveal-stagger">
+
+        <!-- Athletics -->
+        <article class="program-card stagger-item">
+          <div class="program-card__photo photo-placeholder">
+            <span>ATHLETICS PHOTO: Basketball game or team huddle</span>
+          </div>
+          <div class="program-card__body">
+            <h3 class="program-card__title">Athletics</h3>
+            <p class="program-card__desc">Competitive and recreational sports programs building teamwork, fitness, and school spirit across all grade levels.</p>
+          </div>
+        </article>
+
+        <!-- Arts -->
+        <article class="program-card stagger-item">
+          <div class="program-card__photo photo-placeholder">
+            <span>ARTS PHOTO: Theatre performance or art class</span>
+          </div>
+          <div class="program-card__body">
+            <h3 class="program-card__title">Arts &amp; Performance</h3>
+            <p class="program-card__desc">Theatre, visual arts, and music programs where students find their voice and bring stories to life on stage and canvas.</p>
+          </div>
+        </article>
+
+        <!-- Leadership -->
+        <article class="program-card stagger-item">
+          <div class="program-card__photo photo-placeholder">
+            <span>LEADERSHIP PHOTO: MUN or student council meeting</span>
+          </div>
+          <div class="program-card__body">
+            <h3 class="program-card__title">Leadership &amp; Service</h3>
+            <p class="program-card__desc">Model UN, student council, and service learning programs developing thoughtful, engaged leaders ready to shape the world.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       5. GALLERY STRIP
+       ====================================================== -->
+  <section class="gallery" id="gallery" aria-label="Photo gallery">
+    <div class="container">
+      <div class="gallery__header reveal">
+        <h2>Life in the CCA</h2>
+      </div>
+    </div>
+
+    <div class="gallery__viewport">
+      <div class="gallery__track" aria-hidden="true">
+
+        <!-- Original 8 tiles -->
+        <div class="gallery-tile"><span>Basketball photo here</span></div>
+        <div class="gallery-tile"><span>Team huddle photo here</span></div>
+        <div class="gallery-tile"><span>MUN photo here</span></div>
+        <div class="gallery-tile"><span>Theatre performance photo here</span></div>
+        <div class="gallery-tile"><span>Athletics field day photo here</span></div>
+        <div class="gallery-tile"><span>Art showcase photo here</span></div>
+        <div class="gallery-tile"><span>Leadership event photo here</span></div>
+        <div class="gallery-tile"><span>Community service photo here</span></div>
+
+        <!-- Duplicate set for seamless loop -->
+        <div class="gallery-tile"><span>Basketball photo here</span></div>
+        <div class="gallery-tile"><span>Team huddle photo here</span></div>
+        <div class="gallery-tile"><span>MUN photo here</span></div>
+        <div class="gallery-tile"><span>Theatre performance photo here</span></div>
+        <div class="gallery-tile"><span>Athletics field day photo here</span></div>
+        <div class="gallery-tile"><span>Art showcase photo here</span></div>
+        <div class="gallery-tile"><span>Leadership event photo here</span></div>
+        <div class="gallery-tile"><span>Community service photo here</span></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       6. CTA BANNER
+       ====================================================== -->
+  <section class="cta-banner" id="cta" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-banner__inner reveal">
+        <h2 class="cta-banner__heading" id="cta-heading">Ready to Get Involved?</h2>
+        <a href="joining-elc.html" class="btn btn--yellow">Learn How to Join</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <p class="footer__name">AISB CCA Department</p>
+        <p class="footer__tagline">Once a Vampire, Always a Vampire</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="welcome.html">Welcome</a></li>
+          <li><a href="philosophy.html">Our Philosophy</a></li>
+          <li><a href="joining-elc.html">Joining the ELC</a></li>
+          <li>
+            <a href="https://docs.google.com/document/d/1C8rKPDsnyIg01VgttbhQd866ZwGXewxtXoNhxPmOfxU/edit"
+               target="_blank" rel="noopener noreferrer">
+              ELC Handbook
+              <svg class="nav__ext-icon" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5v5"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://docs.google.com/document/d/1jAWtmQBweBVDEVaAY76nu84KtQJgYyB6U0lxwEaAoNE/edit"
+               target="_blank" rel="noopener noreferrer">
+              ES Handbook
+              <svg class="nav__ext-icon" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5v5"/></svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="footer__school">
+        <p class="footer__school-name">American International School of Bucharest</p>
+        <p class="footer__school-location">Bucharest, Romania</p>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2025 AISB. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
