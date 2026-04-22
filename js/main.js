@@ -150,33 +150,64 @@
 })();
 
 // ============================================================
-//  HERO — floating bats + headline word-split spring animation
+//  HERO — vampire atmosphere + headline word-split spring animation
 // ============================================================
 
 (function () {
   'use strict';
 
-  // Inject floating bats into hero
   var hero = document.querySelector('.hero');
   if (hero) {
+    var content = hero.querySelector('.hero__content');
+
+    // --- Floating bats (varied sizes) ---
     var batConfig = [
-      { top: '18%', duration: '22s', delay: '0s'  },
-      { top: '44%', duration: '29s', delay: '5s'  },
-      { top: '28%', duration: '18s', delay: '10s' },
-      { top: '62%', duration: '26s', delay: '15s' },
+      { top: '16%', duration: '22s', delay: '0s',   size: ''   },
+      { top: '44%', duration: '31s', delay: '5s',   size: 'lg' },
+      { top: '29%', duration: '18s', delay: '10s',  size: 'sm' },
+      { top: '63%', duration: '27s', delay: '15s',  size: ''   },
+      { top: '38%', duration: '36s', delay: '7s',   size: 'sm' },
+      { top: '72%', duration: '23s', delay: '3s',   size: 'lg' },
+      { top: '55%', duration: '19s', delay: '18s',  size: 'sm' },
     ];
 
     batConfig.forEach(function (cfg) {
       var bat = document.createElement('div');
-      bat.className = 'hero__bat';
+      bat.className = 'hero__bat' + (cfg.size ? ' hero__bat--' + cfg.size : '');
       bat.style.cssText =
         'top:' + cfg.top + ';' +
         '--bat-duration:' + cfg.duration + ';' +
         '--bat-delay:' + cfg.delay + ';';
-      // Insert before hero__content so z-index stacking is correct
-      var content = hero.querySelector('.hero__content');
       hero.insertBefore(bat, content || null);
     });
+
+    // --- Blood drips from the top ---
+    var dripConfig = [
+      { left: '6%',  height: '36px', width: '4px', duration: '5.5s', delay: '0s'   },
+      { left: '18%', height: '54px', width: '3px', duration: '4.2s', delay: '1.7s' },
+      { left: '34%', height: '28px', width: '5px', duration: '6.1s', delay: '0.5s' },
+      { left: '52%', height: '46px', width: '3px', duration: '4.8s', delay: '3.1s' },
+      { left: '69%', height: '22px', width: '4px', duration: '5.8s', delay: '1.1s' },
+      { left: '82%', height: '40px', width: '3px', duration: '4.4s', delay: '2.5s' },
+      { left: '93%', height: '32px', width: '4px', duration: '5.2s', delay: '4.0s' },
+    ];
+
+    dripConfig.forEach(function (cfg) {
+      var drip = document.createElement('div');
+      drip.className = 'hero__blood-drip';
+      drip.style.cssText =
+        'left:' + cfg.left + ';' +
+        'height:' + cfg.height + ';' +
+        'width:' + cfg.width + ';' +
+        '--drip-duration:' + cfg.duration + ';' +
+        '--drip-delay:' + cfg.delay + ';';
+      hero.insertBefore(drip, content || null);
+    });
+
+    // --- Lightning flash overlay ---
+    var lightning = document.createElement('div');
+    lightning.className = 'hero__lightning';
+    hero.insertBefore(lightning, content || null);
   }
 
   // Split hero headline into word spans for spring entrance
