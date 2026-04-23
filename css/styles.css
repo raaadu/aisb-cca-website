@@ -967,7 +967,7 @@ small  { font-size: 0.875rem; }
   position: absolute;
   width: 90px;
   height: 28px; /* matches logo aspect ratio ~3.18:1 */
-  background: url('../unnamed.png') center / contain no-repeat;
+  background: url('/images/vampire-logo.png') center / contain no-repeat;
   filter: invert(1);
   mix-blend-mode: screen;
   opacity: 0.2;
