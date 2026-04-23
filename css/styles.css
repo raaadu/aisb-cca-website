@@ -288,11 +288,11 @@ small  { font-size: 0.875rem; }
 
 .nav__brand-icon {
   flex-shrink: 0;
-  height: 28px;
+  height: 30px;
   width: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  transition: filter 0.2s ease, transform 0.3s ease;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
 }
 
 /* Links */
@@ -962,19 +962,22 @@ small  { font-size: 0.875rem; }
   animation: lightningFlash 11s ease-in-out 4s infinite;
 }
 
-/* Floating bat elements (added via JS) */
+/* Floating logo elements (added via JS) — uses the vampire logo image */
 .hero__bat {
   position: absolute;
-  width: 32px;
-  height: 18px;
-  background: var(--bat-white) center / contain no-repeat;
+  width: 90px;
+  height: 28px; /* matches logo aspect ratio ~3.18:1 */
+  background: url('../unnamed.png') center / contain no-repeat;
+  filter: invert(1);
+  mix-blend-mode: screen;
+  opacity: 0.2;
   pointer-events: none;
   z-index: 1;
   animation: batDrift var(--bat-duration, 22s) linear var(--bat-delay, 0s) infinite;
 }
 
-.hero__bat--sm { width: 18px; height: 10px; opacity: 0.7; }
-.hero__bat--lg { width: 54px; height: 30px; }
+.hero__bat--sm { width: 55px;  height: 17px; opacity: 0.14; }
+.hero__bat--lg { width: 130px; height: 41px; opacity: 0.22; }
 
 .hero__content {
   position: relative;

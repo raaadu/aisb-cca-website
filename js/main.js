@@ -210,21 +210,28 @@
     hero.insertBefore(lightning, content || null);
   }
 
-  // Split hero headline into word spans for spring entrance
+  // Split hero headline into word spans for spring entrance, preserving <br> line breaks
   var headline = document.querySelector('.hero__headline');
   if (headline) {
-    var raw = headline.textContent.trim();
-    var words = raw.split(/\s+/);
-
-    // Remove hero-anim from headline (words animate individually)
+    // Remove hero-anim (words animate individually)
     headline.classList.remove('hero-anim');
     headline.style.removeProperty('--delay');
     headline.style.opacity = '1';
     headline.style.transform = 'none';
 
-    headline.innerHTML = words.map(function (word, i) {
-      return '<span class="hero__word" style="--wi:' + i + '">' + word + '</span>';
-    }).join('\u00a0'); // non-breaking space between words
+    var rawHtml = headline.innerHTML.trim();
+    var lines = rawHtml.split(/<br\s*\/?>/i);
+    var wordIndex = 0;
+
+    var processedLines = lines.map(function (line) {
+      var words = line.trim().split(/\s+/).filter(Boolean);
+      var spans = words.map(function (word) {
+        return '<span class="hero__word" style="--wi:' + (wordIndex++) + '">' + word + '</span>';
+      });
+      return spans.join('\u00a0');
+    });
+
+    headline.innerHTML = processedLines.join('<br>');
   }
 
 })();
