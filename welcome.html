@@ -21,10 +21,8 @@
 
       <nav id="nav-links" class="nav__links" aria-label="Main navigation">
         <ul>
-          <li><a href="index.html"        class="nav__link" data-page="index">Home</a></li>
-          <li><a href="welcome.html"      class="nav__link" data-page="welcome">Welcome</a></li>
-          <li><a href="philosophy.html"   class="nav__link" data-page="philosophy">Our Philosophy</a></li>
-          <li><a href="joining-elc.html"  class="nav__link" data-page="joining-elc">Joining the ELC</a></li>
+          <li><a href="index.html"   class="nav__link" data-page="index">Home</a></li>
+          <li><a href="welcome.html" class="nav__link" data-page="welcome">Welcome</a></li>
           <li>
             <a href="https://docs.google.com/document/d/1uVwUEFHOn3_4B4PPxiPPun_PIijwQBy9hPHAp4GYJOQ/edit?tab=t.0"
                class="nav__link" target="_blank" rel="noopener noreferrer">
@@ -123,7 +121,476 @@
   </section>
 
   <!-- ======================================================
-       SECTION 3 — Quick Links
+       SECTION 3 — Division / Season CCA Explorer
+       ====================================================== -->
+  <section class="div-tabs-section" id="cca-explorer">
+    <div class="container">
+
+      <div class="div-tabs-section__header reveal">
+        <span class="section-label">By Division &amp; Season</span>
+        <h2>Explore Our CCAs</h2>
+        <p style="max-width:560px; margin: var(--space-sm) auto 0;">Browse co-curricular activities by school division and season. Select a division below, then choose a season to see what's on offer.</p>
+      </div>
+
+      <!-- Division tab buttons -->
+      <div class="div-tabs" role="tablist" aria-label="School division">
+        <button class="div-tab is-active" data-div="ss" role="tab" aria-selected="true">SS</button>
+        <button class="div-tab" data-div="es" role="tab" aria-selected="false">ES</button>
+        <button class="div-tab" data-div="kg" role="tab" aria-selected="false">KG</button>
+      </div>
+
+      <!-- ===== SS PANEL ===== -->
+      <div class="div-panel is-active" data-div="ss">
+
+        <div class="season-tabs" role="tablist" aria-label="Season — Secondary School">
+          <button class="season-tab" data-season="autumn" role="tab">Autumn Season</button>
+          <button class="season-tab" data-season="winter" role="tab">Winter Season</button>
+          <button class="season-tab is-active" data-season="spring" role="tab">
+            Spring Season
+            <span class="current-badge">Current</span>
+          </button>
+        </div>
+
+        <!-- SS Autumn -->
+        <div class="season-panel" data-season="autumn">
+          <div class="cca-grid">
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Basketball (Men's)</p>
+              <p class="cca-card__meta">Competitive team — Gr. 9–12</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Basketball (Women's)</p>
+              <p class="cca-card__meta">Competitive team — Gr. 9–12</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Volleyball</p>
+              <p class="cca-card__meta">Competitive team — Gr. 6–12</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Cross Country</p>
+              <p class="cca-card__meta">Running — Gr. 6–12</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Drama Club</p>
+              <p class="cca-card__meta">Performance &amp; improvisation — Gr. 6–12</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Model United Nations</p>
+              <p class="cca-card__meta">Debate &amp; diplomacy — Gr. 9–12</p>
+            </div>
+          </div>
+          <div class="season-photos">
+            <p class="season-photos__label">Season Photos</p>
+            <div class="photo-grid">
+              <div class="photo-placeholder"><span>SS Autumn photo 1</span></div>
+              <div class="photo-placeholder"><span>SS Autumn photo 2</span></div>
+              <div class="photo-placeholder"><span>SS Autumn photo 3</span></div>
+              <div class="photo-placeholder"><span>SS Autumn photo 4</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SS Winter -->
+        <div class="season-panel" data-season="winter">
+          <div class="cca-grid">
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Swimming</p>
+              <p class="cca-card__meta">Competitive — Gr. 6–12</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Basketball (continued)</p>
+              <p class="cca-card__meta">Competitive team — Gr. 9–12</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Dance Company</p>
+              <p class="cca-card__meta">Contemporary &amp; hip-hop — Gr. 6–12</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Academic Challenge Bowl</p>
+              <p class="cca-card__meta">Inter-school competition — Gr. 9–12</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Debate Club</p>
+              <p class="cca-card__meta">Public speaking — Gr. 7–12</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Photography Club</p>
+              <p class="cca-card__meta">Digital &amp; darkroom — Gr. 8–12</p>
+            </div>
+          </div>
+          <div class="season-photos">
+            <p class="season-photos__label">Season Photos</p>
+            <div class="photo-grid">
+              <div class="photo-placeholder"><span>SS Winter photo 1</span></div>
+              <div class="photo-placeholder"><span>SS Winter photo 2</span></div>
+              <div class="photo-placeholder"><span>SS Winter photo 3</span></div>
+              <div class="photo-placeholder"><span>SS Winter photo 4</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SS Spring (current) -->
+        <div class="season-panel is-active" data-season="spring">
+          <div class="cca-grid">
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Track &amp; Field</p>
+              <p class="cca-card__meta">Competitive — Gr. 6–12</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Tennis</p>
+              <p class="cca-card__meta">Singles &amp; doubles — Gr. 6–12</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Spring Theatre Production</p>
+              <p class="cca-card__meta">Main stage musical — Gr. 6–12</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Environmental Action Club</p>
+              <p class="cca-card__meta">Sustainability projects — Gr. 7–12</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Robotics</p>
+              <p class="cca-card__meta">Engineering &amp; coding — Gr. 8–12</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Yearbook</p>
+              <p class="cca-card__meta">Design &amp; journalism — Gr. 9–12</p>
+            </div>
+          </div>
+          <div class="season-photos">
+            <p class="season-photos__label">Season Photos</p>
+            <div class="photo-grid">
+              <div class="photo-placeholder"><span>SS Spring photo 1</span></div>
+              <div class="photo-placeholder"><span>SS Spring photo 2</span></div>
+              <div class="photo-placeholder"><span>SS Spring photo 3</span></div>
+              <div class="photo-placeholder"><span>SS Spring photo 4</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /ss panel -->
+
+      <!-- ===== ES PANEL ===== -->
+      <div class="div-panel" data-div="es">
+
+        <div class="season-tabs" role="tablist" aria-label="Season — Elementary School">
+          <button class="season-tab" data-season="autumn" role="tab">Autumn Season</button>
+          <button class="season-tab" data-season="winter" role="tab">Winter Season</button>
+          <button class="season-tab is-active" data-season="spring" role="tab">
+            Spring Season
+            <span class="current-badge">Current</span>
+          </button>
+        </div>
+
+        <!-- ES Autumn -->
+        <div class="season-panel" data-season="autumn">
+          <div class="cca-grid">
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Flag Football</p>
+              <p class="cca-card__meta">Recreational — Gr. 3–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Cross Country</p>
+              <p class="cca-card__meta">Fun runs — Gr. 3–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Chess Club</p>
+              <p class="cca-card__meta">Strategy &amp; competition — Gr. 2–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Art Club</p>
+              <p class="cca-card__meta">Drawing, painting &amp; crafts — Gr. 1–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Drama Explorers</p>
+              <p class="cca-card__meta">Storytelling &amp; performance — Gr. 2–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Science Lab Club</p>
+              <p class="cca-card__meta">Experiments &amp; discovery — Gr. 3–5</p>
+            </div>
+          </div>
+          <div class="season-photos">
+            <p class="season-photos__label">Season Photos</p>
+            <div class="photo-grid">
+              <div class="photo-placeholder"><span>ES Autumn photo 1</span></div>
+              <div class="photo-placeholder"><span>ES Autumn photo 2</span></div>
+              <div class="photo-placeholder"><span>ES Autumn photo 3</span></div>
+              <div class="photo-placeholder"><span>ES Autumn photo 4</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ES Winter -->
+        <div class="season-panel" data-season="winter">
+          <div class="cca-grid">
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Basketball Skills</p>
+              <p class="cca-card__meta">Skill development — Gr. 3–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Gymnastics</p>
+              <p class="cca-card__meta">Recreational — Gr. 1–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Creative Writing</p>
+              <p class="cca-card__meta">Stories &amp; poetry — Gr. 3–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Choir</p>
+              <p class="cca-card__meta">Ensemble singing — Gr. 2–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Coding Basics</p>
+              <p class="cca-card__meta">Scratch &amp; block coding — Gr. 2–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Cooking Club</p>
+              <p class="cca-card__meta">Recipes &amp; nutrition — Gr. 3–5</p>
+            </div>
+          </div>
+          <div class="season-photos">
+            <p class="season-photos__label">Season Photos</p>
+            <div class="photo-grid">
+              <div class="photo-placeholder"><span>ES Winter photo 1</span></div>
+              <div class="photo-placeholder"><span>ES Winter photo 2</span></div>
+              <div class="photo-placeholder"><span>ES Winter photo 3</span></div>
+              <div class="photo-placeholder"><span>ES Winter photo 4</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ES Spring (current) -->
+        <div class="season-panel is-active" data-season="spring">
+          <div class="cca-grid">
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Track &amp; Field Fun Run</p>
+              <p class="cca-card__meta">Recreational — Gr. 1–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Tennis Basics</p>
+              <p class="cca-card__meta">Introduction to tennis — Gr. 3–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Theater Performance</p>
+              <p class="cca-card__meta">Spring showcase — Gr. 2–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Garden Club</p>
+              <p class="cca-card__meta">Planting &amp; nature — Gr. 1–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">STEM Challenge</p>
+              <p class="cca-card__meta">Engineering design — Gr. 3–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Dance</p>
+              <p class="cca-card__meta">Movement &amp; choreography — Gr. 1–5</p>
+            </div>
+          </div>
+          <div class="season-photos">
+            <p class="season-photos__label">Season Photos</p>
+            <div class="photo-grid">
+              <div class="photo-placeholder"><span>ES Spring photo 1</span></div>
+              <div class="photo-placeholder"><span>ES Spring photo 2</span></div>
+              <div class="photo-placeholder"><span>ES Spring photo 3</span></div>
+              <div class="photo-placeholder"><span>ES Spring photo 4</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /es panel -->
+
+      <!-- ===== KG PANEL ===== -->
+      <div class="div-panel" data-div="kg">
+
+        <div class="season-tabs" role="tablist" aria-label="Season — Kindergarten">
+          <button class="season-tab" data-season="autumn" role="tab">Autumn Season</button>
+          <button class="season-tab" data-season="winter" role="tab">Winter Season</button>
+          <button class="season-tab is-active" data-season="spring" role="tab">
+            Spring Season
+            <span class="current-badge">Current</span>
+          </button>
+        </div>
+
+        <!-- KG Autumn -->
+        <div class="season-panel" data-season="autumn">
+          <div class="cca-grid">
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Movement &amp; Play</p>
+              <p class="cca-card__meta">Active games — Ages 4–6</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Creative Arts</p>
+              <p class="cca-card__meta">Painting &amp; crafts — Ages 3–6</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Little Explorers</p>
+              <p class="cca-card__meta">Nature &amp; science — Ages 4–6</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Early Music</p>
+              <p class="cca-card__meta">Songs &amp; rhythm — Ages 3–6</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Mini Movers</p>
+              <p class="cca-card__meta">Coordination &amp; fun — Ages 3–5</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Sensory Garden</p>
+              <p class="cca-card__meta">Outdoor discovery — Ages 3–6</p>
+            </div>
+          </div>
+          <div class="season-photos">
+            <p class="season-photos__label">Season Photos</p>
+            <div class="photo-grid">
+              <div class="photo-placeholder"><span>KG Autumn photo 1</span></div>
+              <div class="photo-placeholder"><span>KG Autumn photo 2</span></div>
+              <div class="photo-placeholder"><span>KG Autumn photo 3</span></div>
+              <div class="photo-placeholder"><span>KG Autumn photo 4</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KG Winter -->
+        <div class="season-panel" data-season="winter">
+          <div class="cca-grid">
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Gymnastics Fun</p>
+              <p class="cca-card__meta">Tumbling &amp; balance — Ages 3–6</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Story Time &amp; Drama</p>
+              <p class="cca-card__meta">Imaginative play — Ages 3–6</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Building Blocks</p>
+              <p class="cca-card__meta">STEM play — Ages 3–6</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Winter Crafts</p>
+              <p class="cca-card__meta">Seasonal art — Ages 3–6</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Puppet Theatre</p>
+              <p class="cca-card__meta">Puppetry &amp; storytelling — Ages 4–6</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Early Science</p>
+              <p class="cca-card__meta">Simple experiments — Ages 4–6</p>
+            </div>
+          </div>
+          <div class="season-photos">
+            <p class="season-photos__label">Season Photos</p>
+            <div class="photo-grid">
+              <div class="photo-placeholder"><span>KG Winter photo 1</span></div>
+              <div class="photo-placeholder"><span>KG Winter photo 2</span></div>
+              <div class="photo-placeholder"><span>KG Winter photo 3</span></div>
+              <div class="photo-placeholder"><span>KG Winter photo 4</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KG Spring (current) -->
+        <div class="season-panel is-active" data-season="spring">
+          <div class="cca-grid">
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Spring Dance</p>
+              <p class="cca-card__meta">Movement &amp; expression — Ages 3–6</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Little Athletes</p>
+              <p class="cca-card__meta">Fun sports — Ages 4–6</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Garden Discovery</p>
+              <p class="cca-card__meta">Planting &amp; growing — Ages 3–6</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--arts">Arts</span>
+              <p class="cca-card__name">Nature Art</p>
+              <p class="cca-card__meta">Outdoor creativity — Ages 3–6</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--academic">Academic</span>
+              <p class="cca-card__name">Mini Chefs</p>
+              <p class="cca-card__meta">Simple cooking — Ages 4–6</p>
+            </div>
+            <div class="cca-card">
+              <span class="cca-card__badge cca-card__badge--athletics">Athletics</span>
+              <p class="cca-card__name">Sand &amp; Water Play</p>
+              <p class="cca-card__meta">Sensory &amp; active — Ages 3–5</p>
+            </div>
+          </div>
+          <div class="season-photos">
+            <p class="season-photos__label">Season Photos</p>
+            <div class="photo-grid">
+              <div class="photo-placeholder"><span>KG Spring photo 1</span></div>
+              <div class="photo-placeholder"><span>KG Spring photo 2</span></div>
+              <div class="photo-placeholder"><span>KG Spring photo 3</span></div>
+              <div class="photo-placeholder"><span>KG Spring photo 4</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /kg panel -->
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SECTION 4 — Quick Links / Resources
        ====================================================== -->
   <section class="section quick-links" id="quick-links">
     <div class="container">
@@ -219,8 +686,6 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="welcome.html">Welcome</a></li>
-          <li><a href="philosophy.html">Our Philosophy</a></li>
-          <li><a href="joining-elc.html">Joining the ELC</a></li>
           <li>
             <a href="https://docs.google.com/document/d/1uVwUEFHOn3_4B4PPxiPPun_PIijwQBy9hPHAp4GYJOQ/edit?tab=t.0"
                target="_blank" rel="noopener noreferrer">

@@ -210,28 +210,30 @@
     hero.insertBefore(lightning, content || null);
   }
 
-  // Split hero headline into word spans for spring entrance, preserving <br> line breaks
+  // Animate hero headline — if .hero__line block spans are present, CSS handles it via --li.
+  // Otherwise fall back to per-word spring animation.
   var headline = document.querySelector('.hero__headline');
   if (headline) {
-    // Remove hero-anim (words animate individually)
     headline.classList.remove('hero-anim');
     headline.style.removeProperty('--delay');
     headline.style.opacity = '1';
     headline.style.transform = 'none';
 
-    var rawHtml = headline.innerHTML.trim();
-    var lines = rawHtml.split(/<br\s*\/?>/i);
-    var wordIndex = 0;
+    if (!headline.querySelector('.hero__line')) {
+      var rawHtml = headline.innerHTML.trim();
+      var lines = rawHtml.split(/<br\s*\/?>/i);
+      var wordIndex = 0;
 
-    var processedLines = lines.map(function (line) {
-      var words = line.trim().split(/\s+/).filter(Boolean);
-      var spans = words.map(function (word) {
-        return '<span class="hero__word" style="--wi:' + (wordIndex++) + '">' + word + '</span>';
+      var processedLines = lines.map(function (line) {
+        var words = line.trim().split(/\s+/).filter(Boolean);
+        var spans = words.map(function (word) {
+          return '<span class="hero__word" style="--wi:' + (wordIndex++) + '">' + word + '</span>';
+        });
+        return spans.join('\u00a0');
       });
-      return spans.join('\u00a0');
-    });
 
-    headline.innerHTML = processedLines.join('<br>');
+      headline.innerHTML = processedLines.join('<br>');
+    }
   }
 
 })();
@@ -267,6 +269,60 @@
     } else {
       observer.observe(el);
     }
+  });
+
+})();
+
+// ============================================================
+//  DIVISION TABS (Welcome page — SS / ES / KG)
+// ============================================================
+
+(function () {
+  'use strict';
+
+  var divTabs = document.querySelectorAll('.div-tab');
+  if (!divTabs.length) return;
+
+  divTabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var target = tab.dataset.div;
+
+      divTabs.forEach(function (t) { t.classList.remove('is-active'); });
+      tab.classList.add('is-active');
+
+      document.querySelectorAll('.div-panel').forEach(function (panel) {
+        panel.classList.toggle('is-active', panel.dataset.div === target);
+      });
+    });
+  });
+
+})();
+
+// ============================================================
+//  SEASON TABS (Welcome page — nested inside division panels)
+// ============================================================
+
+(function () {
+  'use strict';
+
+  document.querySelectorAll('.season-tabs').forEach(function (tabGroup) {
+    tabGroup.querySelectorAll('.season-tab').forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var target = tab.dataset.season;
+        var divPanel = tab.closest('.div-panel');
+
+        tabGroup.querySelectorAll('.season-tab').forEach(function (t) {
+          t.classList.remove('is-active');
+        });
+        tab.classList.add('is-active');
+
+        if (divPanel) {
+          divPanel.querySelectorAll('.season-panel').forEach(function (panel) {
+            panel.classList.toggle('is-active', panel.dataset.season === target);
+          });
+        }
+      });
+    });
   });
 
 })();
